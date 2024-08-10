@@ -4,6 +4,7 @@
 ZSHRC_SOURCE="$HOME/.zshrc"
 ROFI_SOURCE="$HOME/.config/rofi/config.rasi"
 TERMINATOR_SOURCE="$HOME/.config/terminator/config"
+ICONS_SOURCE="$HOME/.local/share/icons/We10X-green-dark"
 
 # Define the destination directory
 CONFIG_DIR="/home/ncoder0/config"
@@ -14,6 +15,7 @@ mkdir -p "$CONFIG_DIR/rofi"
 cp -u "$ROFI_SOURCE" "$CONFIG_DIR/rofi/"
 mkdir -p "$CONFIG_DIR/terminator"
 cp -u "$TERMINATOR_SOURCE" "$CONFIG_DIR/terminator/"
+cp -u -r "$ICONS_SOURCE" "$CONFIG_DIR/icons/"
 
 # Navigate to the config directory
 cd "$CONFIG_DIR"

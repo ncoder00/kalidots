@@ -28,6 +28,10 @@ cd $HOME/config
 # Pull the latest changes
 git pull origin main
 
+# Install the icon pack
+mkdir -p $HOME/.local/share/icons/
+cp -r $HOME/config/icons/We10X-green-dark $HOME/.local/share/icons/
+
 # Create necessary directories
 mkdir -p $HOME/.config/rofi
 mkdir -p $HOME/.config/terminator
