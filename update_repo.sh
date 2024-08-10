@@ -4,7 +4,7 @@
 ZSHRC_SOURCE="$HOME/.zshrc"
 ROFI_SOURCE="$HOME/.config/rofi/config.rasi"
 TERMINATOR_SOURCE="$HOME/.config/terminator/config"
-ICONS_SOURCE="$HOME/.local/share/icons/We10X-green-dark"
+XFCE_PANEL_SOURCE="$HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml"
 
 # Define the destination directory
 CONFIG_DIR="/home/ncoder0/config"
@@ -15,7 +15,7 @@ mkdir -p "$CONFIG_DIR/rofi"
 cp -u "$ROFI_SOURCE" "$CONFIG_DIR/rofi/"
 mkdir -p "$CONFIG_DIR/terminator"
 cp -u "$TERMINATOR_SOURCE" "$CONFIG_DIR/terminator/"
-cp -u -r "$ICONS_SOURCE" "$CONFIG_DIR/icons/"
+cp -u "$XFCE_PANEL_SOURCE" "$CONFIG_DIR/xfce4/xfconf/xfce-perchannel-xml/"
 
 # Navigate to the config directory
 cd "$CONFIG_DIR"
