@@ -1,0 +1,30 @@
+[global_config]
+  tab_position = bottom
+  enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminatorThemes
+  clear_select_on_copy = True
+  title_at_bottom = True
+[keybindings]
+[profiles]
+  [[default]]
+    background_color = "#011423"
+    background_darkness = 0.95
+    cursor_shape = ibeam
+    font = JetBrains Mono NL Light 10
+    foreground_color = "#CBE0F0"
+    scroll_on_output = True
+    scrollback_infinite = True
+    palette = "#214969:#E52E2E:#44FFB1:#FFE073:#0FC5ED:#a277ff:#24EAF7:#CBE0F0:#033259:#E52E2E:#44FFB1:#FFE073:#0FC5ED:#a277ff:#24EAF7:#CBE0F0"
+    copy_on_selection = True
+    title_transmit_bg_color = "#00827f"
+    title_receive_bg_color = "#ed333b"
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+      geometry = 900, 350
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = FirefoxDev
+[plugins]
