@@ -17,6 +17,7 @@ check_and_install "rofi"
 check_and_install "terminator"
 check_and_install "zsh"
 check_and_install "git"  # Ensure git is installed for cloning repositories
+check_and_install "kwrite"  # Install kwrite
 
 # Clone the repository if it hasn't been cloned yet
 if [ ! -d "$HOME/config" ]; then
@@ -29,21 +30,12 @@ cd $HOME/config
 # Pull the latest changes
 git pull origin main
 
-# Clone We10X icon theme to Downloads if not already cloned
-if [ ! -d "$HOME/Downloads/We10X-icon-theme" ]; then
-    git clone https://github.com/yeyushengfan258/We10X-icon-theme.git $HOME/Downloads/We10X-icon-theme
-    echo "We10X-icon-theme cloned to Downloads."
-else
-    echo "We10X-icon-theme already exists in Downloads."
-fi
+# Restore XFCE panel profile
+mkdir -p $HOME/.local/share/xfce4-panel-profiles/
+cp -r $HOME/config/xfce4-panel-profiles/Main_Panel.tar.bz2 $HOME/.local/share/xfce4-panel-profiles/
 
-# Clone Juno theme to Downloads if not already cloned
-if [ ! -d "$HOME/Downloads/Juno" ]; then
-    git clone https://github.com/EliverLara/Juno.git $HOME/Downloads/Juno
-    echo "Juno theme cloned to Downloads."
-else
-    echo "Juno theme already exists in Downloads."
-fi
+# Restore Kwrite configuration
+cp -u $HOME/config/kwriterc $HOME/.config/kwriterc
 
 # Create necessary directories
 mkdir -p $HOME/.config/rofi
@@ -54,4 +46,4 @@ ln -sf $HOME/config/.zshrc $HOME/.zshrc
 ln -sf $HOME/config/rofi/config.rasi $HOME/.config/rofi/config.rasi
 ln -sf $HOME/config/terminator/config $HOME/.config/terminator/config
 
-echo "Applications checked, repositories cloned to Downloads, and configurations have been installed."
+echo "Applications checked, XFCE panel profile, Kwrite settings, and configurations have been installed."
