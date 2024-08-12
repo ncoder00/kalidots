@@ -258,7 +258,7 @@ alias updatekali='sudo apt update && sudo apt full-upgrade -y'
 labs() {
     echo -n "Enter the box name: "
     read boxname
-    base_dir="/home/ncoder0/Desktop/Pentest/Labs/$boxname"
+    base_dir="$HOME/Desktop/Pentest/Labs/$boxname"
     mkdir -p "$base_dir"/{1-Enum,2-Exploits,3-PrivEsc,4-Reports,5-Other}
     echo "Created folders for $boxname in $base_dir"
 }
